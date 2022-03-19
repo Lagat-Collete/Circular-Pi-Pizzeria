@@ -47,7 +47,7 @@
 <div class="container" id="order">
   <div class="row">
     <h3>Place your order here</h3>
-    <div class="col-sm-6">
+    <div class="col-md-6">
       <h4>Choose here</h4>
       <div class="form-group">
         <label for="size">Size</label>
@@ -87,7 +87,7 @@
 
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-md-6">
       <h4>Checkout </h4>
       <div class="grand">
         <div id="grand-orders">
@@ -106,11 +106,37 @@
               <td id="totals"></td>
             </tbody>
           </table>
-           
+          <h6 id="pizzatotal"></h6> 
+          <h6 id="totalbill"></h6>
+          <h6 id="delivery">Delivery Ksh.100</h6>
+          <h6 id="comment"></h6>
 
         </div>
+        <div id="totals-button">
+          <button class="btn btn-primary" type="submit" id="morepizza">Buy more</button>
+          <button class="btn btn-primary" type="submit" id="Checkout">Checkout</button>
+          <button class="btn btn-primary" type="submit" id="deliver">Need delivery?</button>
+        </div>
+      </div>
+      <div class="delivery">
+        <form>
+          <div class="form-group">
+            <input type="text" id="name" class="form-control" placeholder="Name" required>
+            <input type="number" id="number" class="form-control" placeholder="Phone Number" required>
+            <input type="text" id="location" class="form-control" placeholder="Where do you stay" required>
+            <button class="btn btn-ptimary" id="last">Order Now</button>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
+</div>
+<div class="about-us" id="about-us"></div>
+<div class="row">
+  <div class="col-sm-6">
+    <h2>About Us</h2>
+
+
   </div>
 </div>
 
