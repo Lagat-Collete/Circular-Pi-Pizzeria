@@ -1,0 +1,40 @@
+#nav{
+  background-image: url(../images/pizza6.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 80vh;
+  background-repeat: no-repeat;
+  color: rgba(255, 255, 255, 0.185);
+  /* width: 100vw; */
+  position: relative;
+  border-radius: 20px;
+}
+.link a{
+  display: inline-block;
+}
+h2{
+  color: #D5672A;
+}
+dt{
+  color:#F89E6E ;
+}
+
+#link{
+  background-image: url(../images/menu.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 80vh;
+  width: 100vw;
+}
+#menu{
+  text-align: center;
+  background-image: url(../images/flower.jpeg);
+  background-repeat: no-repeat;
+  background-position:  center;
+  padding: 40px;
+  background-size:contain;
+  font-weight: 600;
+  height: 80vh;
+  line-height: 15px;
+}
