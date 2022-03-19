@@ -1,3 +1,15 @@
+body{
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  background-color: #F99D46;
+}
+
+#nav h1{
+  color: black;
+  text-align: center;
+}
+
 #nav{
   background-image: url(../images/pizza6.jpg);
   background-position: center center;
@@ -40,4 +52,17 @@ dt{
 }
 .delivery {
   display: none;
+}
+.top-header{
+  background-color: #f0a780;
+  color: rgb(2, 175, 95);
+}
+.link a{
+  color:rgb(56, 6, 6);
+}
+#about-us{
+  text-align: center;
+}
+#about-us h2{
+  color: rgb(9, 51, 51);
 }
