@@ -1,8 +1,8 @@
 body{
-  margin: 0;
+  margin: 2%;
   padding: 0;
   /* box-sizing: border-box; */
-  background-color: #F99D46;
+  /* background-color: #f3bfb6; */
 }
 
 #nav h1{
@@ -65,4 +65,62 @@ dt{
 }
 #about-us h2{
   color: rgb(9, 51, 51);
+}
+.contact{
+  padding-top: 20px;
+  background-color: #222222;
+}
+.col-md-3{
+  text-align: center;
+  padding: 2%;
+}
+.contact h2{
+  font-size: 24px;
+  color: #C83721;
+}
+.contact li{
+  margin: 0.8em 0;
+  word-spacing: 2px;
+  line-height: 20px;
+  text-align: justtify;
+  color: white;
+  font-size: 16px;
+  font-family: 'open sans condensed', 'HelveticaNeue', 'Helvetica Neue', 
+  'Helvetica-Neue', Helvetica, Arial, sans-serif;
+  
+}
+.contact .num{
+  color: maroon;
+}
+.contact p{
+  margin: 0.8em 0;
+  word-spacing: 2px;
+  line-height: 20px;
+  text-align: justtify;
+  color: white;
+  font-size: 16px;
+  font-family: 'open sans condensed', 'HelveticaNeue', 'Helvetica Neue', 
+  'Helvetica-Neue', Helvetica, Arial, sans-serif;
+}
+.fb{
+  width:  30px;
+  color: black;
+}
+.foot a{
+  color: #C83721;
+}
+.foot{
+  padding: 20px;
+  text-align: center;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+  height: 70px;
+  background-color: #2D2D2D;
+}
+.footer{
+  text-align: center;
+  font-style: italic;
+  color: #807b79;
+  height: 50px;
+  background-color: #222222;
 }
