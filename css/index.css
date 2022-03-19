@@ -49,16 +49,17 @@ dt{
   font-weight: 600;
   height: 80vh;
   line-height: 15px;
+  border-radius: 20px;
 }
 .delivery {
   display: none;
 }
 .top-header{
-  background-color: #f0a780;
-  color: rgb(2, 175, 95);
+  background-color: #B83118;
+  height: 50px;
 }
 .link a{
-  color:rgb(56, 6, 6);
+  color:rgb(19, 1, 1);
 }
 #about-us{
   text-align: center;
@@ -67,7 +68,7 @@ dt{
   color: rgb(9, 51, 51);
 }
 .contact{
-  padding-top: 20px;
+  padding-top: 15px;
   background-color: #222222;
 }
 .col-md-3{
@@ -80,7 +81,7 @@ dt{
 }
 .contact li{
   margin: 0.8em 0;
-  word-spacing: 2px;
+  word-spacing: 1px;
   line-height: 20px;
   text-align: justtify;
   color: white;
