@@ -38,3 +38,6 @@ dt{
   height: 80vh;
   line-height: 15px;
 }
+.delivery {
+  display: none;
+}

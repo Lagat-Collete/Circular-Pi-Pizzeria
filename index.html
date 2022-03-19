@@ -49,8 +49,6 @@
   </div>
 
 
-
-
   <div class="container" id="order">
   <div class="row">
     <h3>Place your order here</h3>
@@ -99,19 +97,23 @@
       <h4>Checkout </h4>
       <div class="grand">
         <div id="grand-orders">
-          <h4>See your total here:</h4>
-          <table class="table table-sm">
-            <tr>
-              <th>Size</th>
-              <th>Crust</th>
-              <th>Toppings</th>
-              <th>Total</th>
-            </tr>
+          <h2>See your total here:</h2>
+          <table class="table table-sm checkout-table">
+            <thead>
+              <tr class="table-title">
+                  <th scope="col">Size</th>
+                  <th scope="col">Crust</th>
+                  <th scope="col">Toppings</th>
+                  <th scope="col">Total</th>
+              </tr>
+          </thead>
             <tbody id="selected">
-              <td id="psize"></td>
-              <td id="pcrust"></td>
-              <td id="ptoppings"></td>
+              <tr>
+              <td id="pizzasize"></td>
+              <td id="pizzacrust"></td>
+              <td id="pizzatoppings"></td>
               <td id="totals"></td>
+              </tr>
             </tbody>
           </table>
           <h6 id="pizzatotal"></h6>
@@ -122,12 +124,12 @@
         </div>
         <div id="totals-button">
           <button class="btn btn-primary" type="submit" id="morepizza">Buy more</button>
-          <button class="btn btn-primary" type="submit" id="Checkout">Checkout</button>
+          <button class="btn btn-primary" type="submit" id="checkout">Checkout</button>
           <button class="btn btn-primary" type="submit" id="deliver">Need delivery?</button>
         </div>
       </div>
       <div class="delivery">
-        <form>
+        <form action="">
           <div class="form-group">
             <input type="text" id="name" class="form-control" placeholder="Name" required>
             <input type="number" id="number" class="form-control" placeholder="Phone Number" required>
@@ -139,16 +141,21 @@
     </div>
   </div>
   </div>
+
+
+
   <div class="about-us" id="about-us"></div>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-12 col-md-12">
       <h2>About Us</h2>
-
-
-    </div>
+      <p>It’s a simple equation that keeps our customers coming back for more. Always fresh toppings and great service plus low, low prices equals great pizza. 
+        Here at The Pizza Company, we strive to give our customers the best. We’re  truly care about our customers.
+        Our customers can count on prompt and quality service, high-quality food made from high-quality products with the freshest ingredients available and great prices.
+        The Pizza Company is a fast food restaurant offering delivery and take-out food service. </p>
+</div>
   </div>
 
-
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="./js/jquery-3.6.0.js"></script>
   <script src="./js/index.js"></script>
 
