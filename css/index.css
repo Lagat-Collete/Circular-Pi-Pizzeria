@@ -101,16 +101,27 @@ h4{
   text-align: center;
   font-weight: 600;
 }
-
+#order{
+  margin-top: 20px;
+}
 h6{
   font-size: 20px;
-  color: #faa697;
+  color: black;
 }
-#about-us{
+#about-us p{
+  margin: 0.8em 0;
+  word-spacing: 2px;
+  line-height: 20px;
+  text-align: justtify;
+  color: rgb(56, 56, 56);
+  font-size: 16px;
   text-align: center;
+  font-family: 'open sans condensed', 'HelveticaNeue', 'Helvetica Neue', 
+  'Helvetica-Neue', Helvetica, Arial, sans-serif;
 }
 #about-us h2{
   color: rgb(9, 51, 51);
+  text-align: center;
 }
 .contact{
   padding-top: 15px;
