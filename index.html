@@ -22,11 +22,12 @@
       <a class="nav-link" href="#menu">Menu</a>
       <a class="nav-link" href="#about-us">About Us</a>
       <a class="nav-link" href="#contact">Contact</a>
+      <h1>Circular <span>Pi Pizzeria</span></h1>
     </div>
   </div>
   <div class="nav">
     <div class=" col-sm-12 col-md-8" id="nav">
-      <h1>Circular Pi Pizzeria</h1>
+      <h1>Circular <span>Pi Pizzeria</span></h1>
       <p>When We Say Fast, We Mean it!</p>
     </div>
 
@@ -51,8 +52,6 @@
       </dl>
     </div>
   </div>
-
-
   <div class="container" id="order">
   <div class="row">
     <h3>Place your order here</h3>
@@ -74,23 +73,19 @@
         <label for="toppings">Toopings available here,kindly chhose</label><br>
         <div class="custom-control custom-checkbox custom-control-inline">
           <input type="checkbox" class="custom-control-input" id="green-pepper" value="green-pepper"
-            name="green-pepper">
+            name="toppings">
           <label for="green-pepper" class="custom-control-label">Green Pepper</label>
         </div>
         <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input" id="Mushroom" value="Mushroom" name="Mushroom">
+          <input type="checkbox" class="custom-control-input" id="Mushroom" value="Mushroom" name="toppings">
           <label for="Mushroom" class="custom-control-label">Mushroom</label>
         </div>
         <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input" id="Pepperoni" value="Pepperoni" name="Pepperoni">
+          <input type="checkbox" class="custom-control-input" id="Pepperoni" value="Pepperoni" name="toppings">
           <label for="Pepperoni" class="custom-control-label">Pepperoni</label>
         </div>
         <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input" id="Chicken" value="Chicken" name="Chicken">
-          <label for="Chicken" class="custom-control-label">Chicken</label>
-        </div>
-        <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input" id="Onion" value="Onion" name="Onion">
+          <input type="checkbox" class="custom-control-input" id="Onion" value="Onion" name="toppings">
           <label for="Onion" class="custom-control-label">Onion</label>
         </div><br><br>
         <button type="submit" class="btn btn-primary" id="proceed">Proceed to Checkout</button>
@@ -105,6 +100,7 @@
           <table class="table table-sm checkout-table">
             <thead>
               <tr class="table-title">
+                <th scope="col">Order No.</th>
                   <th scope="col">Size</th>
                   <th scope="col">Crust</th>
                   <th scope="col">Toppings</th>
@@ -113,6 +109,7 @@
           </thead>
             <tbody id="selected">
               <tr>
+                <th scope="row">1</th>
               <td id="pizzasize"></td>
               <td id="pizzacrust"></td>
               <td id="pizzatoppings"></td>
@@ -211,3 +208,12 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+

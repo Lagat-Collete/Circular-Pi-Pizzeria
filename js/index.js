@@ -1,6 +1,5 @@
 
 
-
 var price, crustPrice, toppingPrice;
 let total = 0;
 
@@ -54,12 +53,12 @@ $(document).ready(function () {
     console.log("Toppings value:" + toppings_value);
 
     if ((pizzaSize == "0") && (pizzaCrust == "0")) {
-      console.log("notthing selected");
-      $("#proceed").show();
+      console.log("nothing selected");
+      $(".proceed").show();
       $(".grand").hide();
       alert("Kindly order");
     } else {
-      $("#proceed").hidde();
+      $("#proceed").hide();
       $(".grand").slideDown(800);
     }
 
@@ -117,7 +116,7 @@ $(document).ready(function () {
       $("#morepizza").hide();
       $("#deliver").slideDown(800);
       $("#delivery").slideDown(800);
-      console.log("Total amount is Ksh." + checkoutTotal);
+      console.log("Total amount is Ksh." + checkTotal);
       $("#pizzatotal").append("The amount is Ksh." + checkTotal)
     });
     $("#deliver").click(function () {
@@ -125,6 +124,7 @@ $(document).ready(function () {
       $(".grand h2").hide();
       $(".delivery").slideDown(800);
       $("#delivery").hide();
+      $("#deliver").hide();
       $("#pizzatotal").hide();
 
       let deliveryamount = checkTotal + 100;
@@ -155,9 +155,9 @@ $(document).ready(function () {
         $("#last").show();
       }
 
-    })
+    });
 
-  })
+  });
 })
 
 
