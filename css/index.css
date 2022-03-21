@@ -52,6 +52,9 @@ dt{
 .nav{
   background-color:#F89E6E;
 }
+.btn1{
+  margin-left:50%;
+}
 
 #menu{
   text-align: center;
@@ -103,6 +106,7 @@ h4{
 }
 #order{
   margin-top: 20px;
+  
 }
 h6{
   font-size: 20px;

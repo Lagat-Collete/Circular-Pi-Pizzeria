@@ -1,6 +1,6 @@
 
-
-var price, crustPrice, toppingPrice;
+$("#order").hide();
+var price ,crustPrice, toppingPrice;
 let total = 0;
 
 function orderPizza(size, crust, toppings, total) {
@@ -10,6 +10,13 @@ function orderPizza(size, crust, toppings, total) {
   this.total = total;
 }
 $(document).ready(function () {
+$(".btn1").click(function(){
+  $("#order").show();
+
+})
+  
+
+
   $("#proceed").click(function (event) {
     let pizzaSize = $("#size-input option:selected").val();
 
@@ -50,7 +57,7 @@ $(document).ready(function () {
         console.log("Select Pizza Crust");
     }
     let toppings_value = pizzaToppings.length * 100;
-    console.log("Toppings value:" + toppings_value);
+    console.log("pizza Toppings value:" + toppings_value);
 
     if ((pizzaSize == "0") && (pizzaCrust == "0")) {
       console.log("nothing selected");
@@ -136,6 +143,7 @@ $(document).ready(function () {
 
       $("#pizzatotal").hide();
       $("#delivery").hide();
+      // $("#order").hide();
       $("#last").hide();
 
       let deliveryamount = checkTotal + 100;
@@ -149,6 +157,7 @@ $(document).ready(function () {
         $("#comment").append(person + ",We have recieved your order and it will be delivered to you at " + location + " for Ksh. " + deliveryamount + ". Pay on delivery.");
         $("#totalbill").hide();
         $("#comment").slideDown(800);
+  
       } else {
         alert("Kindly provide your details.");
         $(".delivery").show();
