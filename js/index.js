@@ -16,12 +16,13 @@ $(".btn1").click(function(){
 })
   
 
+$(document).ready(function(){
 
   $("#proceed").click(function (event) {
     let pizzaSize = $("#size-input option:selected").val();
 
     console.log('pizzaSize =' + pizzaSize);
-    let pizzaCrust = $('#crust-input option:selected').val();
+    let pizzaCrust = $("#crust-input option:selected").val();
     console.log('pizzaCrust=' + pizzaCrust);
     let pizzaToppings = [];
     $.each($('input[name="toppings"]:checked'), function () {
@@ -36,7 +37,7 @@ $(".btn1").click(function(){
         break;
       case "Medium - Ksh.600":
         price = 600;
-        console.log(price);
+        console.log("The price is: " + price);
         break;
       case "Large - Ksh.700":
         price = 700;
@@ -47,6 +48,7 @@ $(".btn1").click(function(){
     switch (pizzaCrust) {
       case "Crispy - Ksh.100":
         crustPrice = 100;
+        console.log(price);
         break;
       case "Stuffed - Ksh.100":
         crustPrice = 100;
@@ -60,8 +62,8 @@ $(".btn1").click(function(){
     console.log("pizza Toppings value:" + toppings_value);
 
     if ((pizzaSize == "0") && (pizzaCrust == "0")) {
-      console.log("nothing selected");
-      $(".proceed").show();
+      console.log("select a pizza");
+      $("#proceed").show();
       $(".grand").hide();
       alert("Kindly order");
     } else {
@@ -71,8 +73,8 @@ $(".btn1").click(function(){
 
     total = price + crustPrice + toppings_value;
     console.log(total);
-    let checkTotal = 0;
-    checkTotal = checkTotal + total;
+    let checkoutTotal = 0;
+    checkoutTotal = checkoutTotal + total;
 
     $("#pizzasize").html($("#size-input option:selected").val());
     $("#pizzcrust").html($("#crust-input option:selected").val());
@@ -86,7 +88,7 @@ $(".btn1").click(function(){
       $.each($("input[name='toppings']:checked"), function () {
         pizzaToppings.push($(this).val());
       });
-      console.log(pizzaToppings.join(","));
+      console.log(pizzaToppings.join(", "));
       switch (pizzaSize) {
         case "Small -Ksh.500":
           price = 500;
@@ -94,7 +96,7 @@ $(".btn1").click(function(){
           break;
         case "Medium - Ksh.600":
           price = 600;
-          console.log(price);
+          console.log("The price is:" + price);
           break;
         case "Large - Ksh.700":
           price = 700;
@@ -121,18 +123,19 @@ $(".btn1").click(function(){
     $("#checkout").click(function () {
       $("#checkout").hide();
       $("#morepizza").hide();
-      $("#deliver").slideDown(800);
-      $("#delivery").slideDown(800);
-      console.log("Total amount is Ksh." + checkTotal);
-      $("#pizzatotal").append("The amount is Ksh." + checkTotal)
+      $("#deliver").show();
+      $("#delivery").show();
+      console.log("Total amount is Ksh." + checkoutTotal);
+      $("#pizzatotal").append("The amount is Ksh." + checkoutTotal)
     });
     $("#deliver").click(function () {
       $(".checkout-table").hide();
       $(".grand h2").hide();
-      $(".delivery").slideDown(800);
+      $(".delivery").show();
       $("#delivery").hide();
       $("#deliver").hide();
       $("#pizzatotal").hide();
+      $(".form").hide();
 
       let deliveryamount = checkTotal + 100;
       console.log("The total amount will be Ksh. " + deliveryamount + "on delivery");
@@ -142,10 +145,10 @@ $(".btn1").click(function(){
       event.preventDefault();
 
       $("#pizzatotal").hide();
-      $("#delivery").hide();
+      $(".delivery").hide();
       $("#last").hide();
 
-      let deliveryamount = checkTotal + 100;
+      let deliveryamount = checkoutTotal + 100;
       console.log("Final total is: " + deliveryamount);
 
       let person = $("#name").val();
@@ -155,7 +158,7 @@ $(".btn1").click(function(){
         $(".delivery").hide();
         $("#comment").append(person + ",We have recieved your order and it will be delivered to you at " + location + " for Ksh. " + deliveryamount + ". Pay on delivery.");
         $("#totalbill").hide();
-        $("#comment").slideDown(800);
+        $("#comment").show();
   
       } else {
         alert("Kindly provide your details.");
@@ -168,4 +171,4 @@ $(".btn1").click(function(){
   });
 })
 
-
+})
