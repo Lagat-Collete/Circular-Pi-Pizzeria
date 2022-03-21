@@ -143,7 +143,6 @@ $(".btn1").click(function(){
 
       $("#pizzatotal").hide();
       $("#delivery").hide();
-      // $("#order").hide();
       $("#last").hide();
 
       let deliveryamount = checkTotal + 100;

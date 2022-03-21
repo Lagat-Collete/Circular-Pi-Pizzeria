@@ -106,7 +106,13 @@ h4{
 }
 #order{
   margin-top: 20px;
-  background-color: #807b79;
+  background-color: #e4dedc;
+  margin-top: 0;
+  padding: 20px;
+  color: black;
+}
+#comment{
+  color: rgb(23, 23, 124);
 }
 h6{
   font-size: 20px;
