@@ -13,7 +13,7 @@ working with constructors, prototypes, objects, properties, and methods in Javas
 - Internet
 - A browser in the computer
 ## Known Bugs
- Un able to to get the totals amount of the items selected.
+ So far not aware of any.
 ## Technologies Used
 - HTML5
 - CSS
