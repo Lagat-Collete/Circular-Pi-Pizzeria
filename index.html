@@ -36,7 +36,7 @@
       <h2>OUR MENU</h2>
       <dl>
         <dt>Pizza size</dt>
-        <dd>Small..............................Ksh.500</dd>
+        <dd>Small...............................Ksh.500</dd>
         <dd>Medium...........................Ksh.600</dd>
         <dd>Large...............................Ksh.700</dd>
         <dt>Crust</dt>
@@ -44,184 +44,147 @@
         <dd>Stuffed..............................Ksh.100</dd>
         <dd>Gluten-free........................Ksh.100</dd>
         <dt>Toopings</dt>
-        <dd>Green Pepper....................Ksh.100</dd>
-        <dd>Mushroom.........................Ksh.150</dd>
-        <dd>Pepperoni.........................Ksh.100</dd>
-        <dd>Chicken.............................Ksh.150</dd>
-        <dd>Onion................................Ksh.100</dd>
+        <dd>Red Peppers.......................Ksh.100</dd>
+        <dd>Chicken..............................Ksh.100</dd>
+        <dd>Onions................................Ksh.100</dd>
       </dl>
     </div>
     <div class="btn1">
-      <button class="btn btn-dark btn-lg">Order</button>
+      <button class="btn btn-dark btn-lg">Place your Order</button>
     </div>
   </div>
-  <div  id="order">
-  <div class="row">
-    <h3>Place your order here</h3>
-    <div class="col-sm-12 col-md-6">
-      <h4>Choose here</h4>
-      <div class="form-group"><br>
-        <div class="form">
-        <label for="size">Size</label>
-        <select name="size" class="form-control" id="size-input">
-          <option value="select"></option>
-          <option value="500">Small -Ksh.500</option>
-          <option value="600">Medium - Ksh.600</option>
-          <option value="700 ">Large - Ksh.700</option>
-        </select><br>
-        <label for="crust">Crust</label>
-        <select name="crust" class="form-control" id="crust-input">
-          <option value="select"></option>
-          <option value="crispy">Crispy - Ksh.100</option>
-          <option value="stuffed">Stuffed - Ksh.100</option>
-          <option value="gluden-free">Gluten-free -Ksh.100</option>
-        </select>
-        <br>
-        <label for="toppings">Toopings available here,kindly choose</label><br>
-        <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input" id="green-pepper" value="green-pepper"
-            name="toppings">
-          <label for="green-pepper" class="custom-control-label">Green Pepper</label>
-        </div>
-        <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input" id="Mushroom" value="Mushroom" name="toppings">
-          <label for="Mushroom" class="custom-control-label">Mushroom</label>
-        </div>
-        <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input" id="Pepperoni" value="Pepperoni" name="toppings">
-          <label for="Pepperoni" class="custom-control-label">Pepperoni</label>
-        </div>
-        <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input" id="Onion" value="Onion" name="toppings">
-          <label for="Onion" class="custom-control-label">Onion</label>
-        </div><br><br>
-        </div>
-        <button type="submit" class="btn btn-secondary" id="proceed">Proceed to Checkout</button>
-
-      </div>
+  <div class="container-fluid" id="order">
+    <div class="container" id="overlay">
+     <h3 id="h3" class="text-success text-center">Place your order</h3>
+     <div class="row">
+       <div class="col-sm-6">
+         <form action="" id="myForm">
+           <label for="pizza">Choose Pizza size</label><br>
+           <select name="pizza" id="pizza">
+            <option value="">select</option>
+             <option value="500">Small Ksh.500</option>
+             <option value="600">Medium Ksh.600</option>
+             <option value="700">Large Ksh.700</option>
+           </select><br><br>
+           <label for="pizza">Favourite Crust</label><br>
+           <select name="crust" id="crust">
+            <option value="">select</option>
+             <option value="100">Crispy Ksh. 100</option>
+             <option value="100">Stuffed Ksh. 100</option>
+             <option value="100">Gluten Ksh. 100</option>
+           </select><br><br>
+           <p class="top">Each of the toppings below is Ksh.100</p>
+           <select name="" id="topping">
+             <option value="">select</option>
+             <option value="100">Red Peppers Ksh.100</option>
+             <option value="100">Chicken Ksh.100</option>
+             <option value="100">Onions Ksh.100</option>
+             <option value="200">Red Peppers & chicken Ksh.200</option>
+             <option value="200">Red Peppers & Onions Ksh.200</option>
+             <option value="200">Chicken & Onions Ksh.200</option>
+             <option value="300">Red Peppers & Chicken & Onions Ksh.300</option>
+           </select><br>
+          <label for="quantity">Number of pizza</label><br>
+           <input type="number" id="quantity" min="1" placeholder="How many pizza" required><br><br>
+           <button type="submit" id="send">PROCEED TO CHECKOUT</button>
+         </form>
+       </div>
+       <div class="col-sm-6">
+         
+         <div class="display"></div>
+         <div class="checkout">
+           <h5 class="mt-2 mb-2">Delivery is Ksh.200<br>
+           If you want click the Delivery button, and if picking by yourself, click Checkout</h5>
+           <button class="mt-2" id="home">Delivery</button>
+           <button id="grand">Checkout</button>
+         </div><br>
+         <div class="userdeliver">
+           <form action="">
+             <p>Enter your details below:</p>
+             <div class="form-group">
+               <input type="text" id="name" class="form-control mb-3" value="" placeholder="Your name..." required>
+               <input type="number" id="phone" class="form-control mb-3" value="" placeholder="Phone number" required>
+               <input type="text" id="place" class="form-control mb-3" value="" placeholder="Your location" required>
+               <button id="finalorder" onclick="amount()">Order</button>
+             </div>
+           </form>
+       </div>
+       <h4 class="pdelivery">Your Total Bill is shown above:</h4>
+       <p class="grandorder"></p>
+       <a href="#myForm"><button id="neworder" type="button" onclick="document.location.reload(true)">place a new order</button></a>
+       </div>
+     </div>
     </div>
-    <div class="col-sm-12 col-md-6">
-      <h4>Checkout </h4>
-      <div class="grand">
-        <div id="grand-orders">
-          <h6>See your total here:</h6>
-          <table class="table table-sm checkout-table">
-            <thead>
-              <tr class="table-title">
-                <th scope="col">Order No.</th>
-                  <th scope="col">Size</th>
-                  <th scope="col">Crust</th>
-                  <th scope="col">Toppings</th>
-                  <th scope="col">Total</th>
-              </tr>
-          </thead>
-            <tbody id="selected">
-              <tr>
-                <th scope="row">1</th>
-              <td id="pizzasize"></td>
-              <td id="pizzacrust"></td>
-              <td id="pizzatoppings"></td>
-              <td id="totals"></td>
-              </tr>
-            </tbody>
-          </table>
-          <h6 id="pizzatotal"></h6>
-          <h6 id="totalbill"></h6>
-          <h6 id="delivery">Delivery Ksh.100</h6>
-          <h6 id="comment"></h6>
-
-        </div>
-        <div id="totals-button">
-          <button class="btn btn-secondary" type="submit" id="morepizza">Buy more</button>
-          <button class="btn btn-secondary" type="submit" id="checkout">Checkout</button>
-          <button class="btn btn-secondary" type="submit" id="deliver">Need delivery?</button>
-        </div>
-      </div>
-      <div class="delivery">
-        <form action="">
-          <div class="form-group">
-            <input type="text" id="name" class="form-control" placeholder="Name" required>
-            <input type="number" id="number" class="form-control" placeholder="Phone Number" required>
-            <input type="text" id="location" class="form-control" placeholder="Where do you stay" required><br><br>
-            <button class="btn btn-secondary" id="last">Order Now</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
+   </div>
 
   <div class="about-us" id="about-us">
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-sm-12 col-md-8">
-      <h2>About Us</h2>
-      <p>It’s a simple equation that keeps our customers coming back for more. Always fresh toppings and great service plus low, low prices equals great pizza. 
-        Here at The Circular Pi Pizzeria, we strive to give our customers the best. We’re  truly care about our customers.
-        Our customers can count on prompt and quality service, high-quality food made from high-quality products with the freshest ingredients available and great prices.
-        The Circular Pi Pizzeria is a fast food restaurant offering delivery and take-out food service. </p>
-</div>
-<div class="col-md-2"></div>
-  </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-sm-12 col-md-8">
+        <h2>About Us</h2>
+        <p>It’s a simple equation that keeps our customers coming back for more. Always fresh toppings and great service
+          plus low, low prices equals great pizza.
+          Here at The Circular Pi Pizzeria, we strive to give our customers the best. We’re truly care about our
+          customers.
+          Our customers can count on prompt and quality service, high-quality food made from high-quality products with
+          the freshest ingredients available and great prices.
+          The Circular Pi Pizzeria is a fast food restaurant offering delivery and take-out food service. </p>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
   </div>
   <footer>
-  <div class="contact" id="contact">
-<div class="row">
-  <div class="col-sm-6 col-md-3">
-    <h2>Circular Pi Pizzeria</h2>
-    <p>The Circular Pi Pizzeria is a fast food restaurant offering delivery and take-out food service, commercial and institutional catering.</p>
-  </div>
-  <div class="col-sm-6 col-md-3">
-    <h2>Come and Eat With Us</h2>
-    <p>We offer a wide variety of tasty pizza options and specials,sure you’ll love.</p>
-  </div>
-  <div class="col-sm-6 col-md-3">
-    <h2>Hours of Operation</h2>
-    <ul>
-      <li>Monday 3:00 PM – 9:30 PM</li>
-      <li>Tuesday 3:00 PM – 9:30 PM</li>
-      <li> Wednesday 3:30 PM – 8:00 PM</li>
-      <li>Thursday 3:30 PM – 8:00 PM</li>
-      <li>Friday 3:30 PM – 10:00 PM</li>
-      <li>Saturday 3:30 PM – 10:00 PM</li>
-    </ul>
-  </div>
-  <div class="col-sm-6 col-md-3">
-    <h2>Main Street</h2>
-    <p>Come and Eat With Us</p>
-    <p>Circular Pi Pizzeria</p>
-    <p class="num">123456789</p>
-  </div>
-</div>
-  </div>
-  <div class="foot">
+    <div class="contact" id="contact">
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <h2>Circular Pi Pizzeria</h2>
+          <p>The Circular Pi Pizzeria is a fast food restaurant offering delivery and take-out food service, commercial
+            and institutional catering.</p>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <h2>Come and Eat With Us</h2>
+          <p>We offer a wide variety of tasty pizza options and specials,sure you’ll love.</p>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <h2>Hours of Operation</h2>
+          <ul>
+            <li>Monday 3:00 PM – 9:30 PM</li>
+            <li>Tuesday 3:00 PM – 9:30 PM</li>
+            <li> Wednesday 3:30 PM – 8:00 PM</li>
+            <li>Thursday 3:30 PM – 8:00 PM</li>
+            <li>Friday 3:30 PM – 10:00 PM</li>
+            <li>Saturday 3:30 PM – 10:00 PM</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <h2>Main Street</h2>
+          <p>Come and Eat With Us</p>
+          <p>Circular Pi Pizzeria</p>
+          <p class="num">123456789</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
 
-    <a href="#contact-us"><CONTACT-US></CONTACT-US></a>
+      <a href="#contact-us">
+        <CONTACT-US></CONTACT-US>
+      </a>
       <a href="#menu">FULL MENU</a>
       <a href="#about-us">ABOUT US</a>
       <a href="#order">ONLINE ORDER</a>
-  </div>
-  <div class="footer">
-    <p>The Circular Pi Pizzeria-Best pizza in main street 2022 (c)All rights reserved.| checksite Websites & SEO <span><img class="fb" src="./images/fbnew.png" alt=""></span></p>
-  </div>
+    </div>
+    <div class="footer">
+      <p>The Circular Pi Pizzeria-Best pizza in main street 2022 (c)All rights reserved.| checksite Websites & SEO
+        <span><img class="fb" src="./images/fbnew.png" alt=""></span></p>
+    </div>
 
-</footer>
+  </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-  <script src="./js/jquery-3.6.0.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
