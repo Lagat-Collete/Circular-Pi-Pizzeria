@@ -111,6 +111,14 @@ h4 {
   background-color: #e2e0df;
   margin-top: 0px;
 }
+select{
+  width: 215px;
+  height: 30px;
+  background-color: white;
+  border-radius: 2px;
+  border: 2px solid black;
+
+}
 label {
   color: black;
   font-weight: 600;
